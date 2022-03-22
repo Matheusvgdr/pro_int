@@ -1,11 +1,7 @@
 /*Criar uma fonte, usar o keyframe (animação), deixar responsivo*/
+/*cores: azul #30A0F9; verde #719B39; roxo #746EAF; vermelho #ED3237; preto #3E3E3E*/
 
 /*Declaração das fontes*/
-/*cores: azul #30A0F9
-        verde #719B39
-        roxo #746EAF
-        vermelho #ED3237
-        preto #3E3E3E*/
 @font-face { 
     font-family: "AlmondNougat";
     src: url(../font/AlmondNougat.woff);
@@ -31,7 +27,6 @@
 /*----------Conteudos Repetidos------------*/
 .container{
     margin: auto;
-    padding: 50px;
     border-radius: 32px;
     position: absolute;
     right: 9%;
@@ -53,13 +48,15 @@
     background-color: transparent;
 }
 
-#cadastro img{
+#cadastro .img2{
     position: absolute;
     top: 100px;
 }
-
-
-
+#cadastro .img1{
+    position: absolute;
+    top: -80px;
+    left: 180px;
+}
 .center{
     text-align: center;
 }
@@ -186,11 +183,40 @@
     border: none;
 }
 
+/*---------------------Inicio Content-3------------------------------*/
+#content_3{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#content_3 h2{
+    text-align: center;
+    font-family: "DearSunshine";
+    font-size: 64px;
+}
+#content_3 p{
+    font-family: "AlmondNougat";
+    font-size: 20px;
+}
+#content_3 button{
+    background-color: transparent;
+    border: 2px solid #222;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    transition: .6s;
+}
+#content_3 button:hover{
+    cursor: pointer;
+    background-color: #ED3237;
+    color: #ffffff;
+    border: none;
+}
+
+
 /*---------------inicio cadastro--------------------*/
 
-section:not(:nth-child(1)){
-    padding-top: 1%;
-}
 #cadastro{
     background-image: url(../img/water.jpg);
     background-repeat: no-repeat;
@@ -200,39 +226,53 @@ section:not(:nth-child(1)){
     height: 100vh;
 }
 
+#cadastro .container{
+    margin-top: 20px;
+    padding: 40px;
+}
+
 /*--------------------Inicio login--------------------------*/
 
 #login{
-     background-image: url(../img/grama.jpg); 
+    background-image: url(../img/grama.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
 }
+
+#login .container{
+    margin-top: 90px;
+    padding: 50px;
+}
 .title_log{
+    text-transform: uppercase;
     position: absolute;
-    right: 25%;
+    top: -50px;
+    right: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.title_log h2{
-    margin-left: 20px;
+form h2{
+    font-family: "DearSunshine";
+    font-size: 50px;
+    
 }
 
 .title_log2{
+    text-transform: uppercase;
     position: absolute;
     display: inline-block;   
 }
 .title_log2 h2{
+    font-size: 60px;
+    font-family: "DearSunshine";
     margin-left: 20px;
-    margin-top: 27px;
+    margin-top: 15px;
     float: right;
 }
-
-
-
 
 /*------------Inicio ginasio----------------*/
 #ginasio{
@@ -375,6 +415,7 @@ form{
     transition: transform 0.3s ease;
 }
 .content-name2{
+    opacity: 0.6;
     position: absolute;
     bottom: 5px;
     left: 0px;
@@ -383,6 +424,7 @@ form{
 .form2 input:focus + .label-name2 .content-name2,
 .form2 input:valid + .label-name2 .content-name2{
     transform: translateY(-80%);
+    opacity: 1;
     font-size: 14px;
     color: #30A0F9;
 }
@@ -438,7 +480,41 @@ transform: translateY(-80%);
 font-size: 14px;
 color: #719B39;
 }
-.form input:focus + .label-name::after, .form input:valid + .label-name::after{
 
+.form input:focus + .label-name::after, .form input:valid + .label-name::after{
 transform: translateY(0%);
+}
+
+footer{
+    height: 50px;
+    color: #fff;
+    background: #222;
+    text-align: center;
+}
+
+.social_media{
+    float: right;
+}
+
+
+/* * Responsividade */
+
+@media (max-width: 575.98px){
+    
+}
+/* small*/
+@media (min-width: 575px) and (max-width: 767.98px){
+   
+}
+/*Medium*/
+@media (min-width: 768px) and (max-width: 991.98px){
+   
+}
+/*Large*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+    
+}
+/*Extra large*/
+@media (min-width: 1200px){
+    
 }

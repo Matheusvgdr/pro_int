@@ -20,7 +20,7 @@
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   <!-- Estilo customizado -->
-  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="../css/estilo.css">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 
   <link rel="shortcut icon" href="" type="image/x-icon">
@@ -31,31 +31,42 @@
     <section id="cadastro"><!--Inicio Cadastro-->
 
         <div class="container">
+          <h2>Cadastre-se na Liga</h2>
   
-          <div class="row title_log2">
-  
-            <img src="img/Pokeazul.png" alt="" width="100">
-            <h2>Cadastre-se na Liga</h2>
-  
-          </div>
+          
   
           <div class="row">
   
             <div class="col-md-6">
-              <img src="img/peeplup.png" alt="">
+              <img src="../img/peeplup.png" class="img2" alt="">
             </div>
-  
             <div class="col-md-6">
   
-              <form action="app/cadastro.php" method="post">
+              <form action="../app/cadastro.php" method="post">
+
+                <div class="title_log2">
+  
+                  <img src="../img/Pokeazul.png" alt="" class="img1" width="100">
+                 
+        
+                </div>
   
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-8">
                     <div class="form2">
   
                       <input type="text" name="nome" autocomplete="off" required>
                       <label for="name" class="label-name2">
-                        <span class="content-name2">Treinador</span>
+                        <span class="content-name2">Nome</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form2">
+  
+                      <input type="password" name="senha" autocomplete="off" required>
+                      <label for="name" class="label-name2">
+                        <span class="content-name2">Senha</span>
                       </label>
                     </div>
                   </div>

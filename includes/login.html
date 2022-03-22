@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
+  <title>Login</title>
   <link rel="stylesheet" href="css/estilo.css">
   <!-- Meta tags Obrigatórias -->
   <meta charset="utf-8">
@@ -20,7 +20,7 @@
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   <!-- Estilo customizado -->
-  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="../css/estilo.css">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 
   <link rel="shortcut icon" href="" type="image/x-icon">
@@ -32,26 +32,27 @@
 
         <div class="container">
   
-          <div class="row title_log">
-  
-            <img src="img/pokeverde.png" alt="" width="100">
-            <h2>Login</h2>
-  
-          </div>
-  
           <div class="row">
   
             <div class="col-md-6">
-              <img src="img/bubassaur.png" alt="">
+              <img src="../img/bubassaur.png" alt="">
             </div>
   
             <div class="col-md-6">
   
-              <form action="" method="post" id="form_log">
+              <form action="../app/login.php" method="post" id="form_log">
+                <!-- <h2>Login</h2> -->
+
+                <div class="title_log">
+  
+                  <img src="../img/pokeverde.png" alt="" width="100">
+                  
+        
+                </div>
   
                 <div class="form" >
   
-                  <input type="text" name="name" autocomplete="off" required>
+                  <input type="text" name="nome" autocomplete="off" required>
                   <label for="name" class="label-name">
                     <span class="content-name">Nome</span>
                   </label>
@@ -59,7 +60,7 @@
   
                 <div class="form">
   
-                  <input type="text" name="name" autocomplete="off" required>
+                  <input type="password" name="senha" autocomplete="off" required >
                   <label for="name" class="label-name">
                     <span class="content-name">Senha</span>
                   </label>
