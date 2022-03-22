@@ -31,7 +31,8 @@ $query->execute(array(
     ':POKEMON3'=> $pokemon3,
     ':TIPO3'=> $tipo3
 ));
-   
-    echo '<script>alert("Cadastro feito com sucesso");</script>';
+    
+    echo '<script>alert("Cadastro executado");window.location.replace("../index.html");</script>';
+
 }
 ?>
