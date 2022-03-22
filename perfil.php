@@ -3,7 +3,7 @@ include("app/verifica.php");
 
 session_start();
 
-if (logIn()) {
+if (logIn()){
 
 ?>
 
@@ -17,7 +17,6 @@ if (logIn()) {
 </head>
 <body>
     
-
 <h1>Bem vindo ao seu perfil</h1>
 
 <a href="app/logout.php">Sair</a>

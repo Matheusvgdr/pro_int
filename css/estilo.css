@@ -116,6 +116,11 @@
     border-radius: 12px;
     padding: 30px 0px;
 }
+header button{
+    margin: 10px;
+    padding: 40px;
+    border: none;
+}
 /*------------Inicio Content-1-------------*/
 .content_1{
     
