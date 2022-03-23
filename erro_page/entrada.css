@@ -21,22 +21,21 @@ html{
 }
 #title{
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 0;
     right: 0;
     color: #fff;
     text-align: center;
-    font-family: "DearSunshine";
     font-weight: 300;
     font-size: 50px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     margin-top: -60px;
     padding-left: 10px;
 }
 #title span{
     color: #fff;
-    
 }
+
 
 #stars{
     width: 1px;

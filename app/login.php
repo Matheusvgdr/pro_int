@@ -18,7 +18,7 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
 
 if(count($users) <= 0){
 
-    echo "Nome ou senha não encontrados";
+    header("location:../sweetalert/erro_login.php");
 
 }else{
 

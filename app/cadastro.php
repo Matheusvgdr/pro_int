@@ -31,8 +31,9 @@ $query->execute(array(
     ':POKEMON3'=> $pokemon3,
     ':TIPO3'=> $tipo3
 ));
-    
-    echo '<script>alert("Cadastro executado");window.location.replace("../index.html");</script>';
+    header("location:../sweetalert/erro.php");
+    // echo '<script>alert("Cadastro executado");window.location.replace("../index.html");</script>';
+    echo '<script src="../sweetalert/erro.php"></script>';
 
 }
 ?>
