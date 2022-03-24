@@ -607,9 +607,6 @@ color: #fff;
 .caixa1{
     background-image: url(../img/bg_pokepurple.PNG);  
 }
-.caixa1 h1{
-    font-size: 64px;
-}
 
 .caixa2{
     background-image: url(../img/bg_pokeblue.PNG);
@@ -794,6 +791,273 @@ i{
 /*-------- Responsividade ----------------*/
 
 @media (max-width: 575.98px){
+    #all img:not(.ball){
+        position: relative;
+        left: 50px;
+        width: 290px;
+        margin-bottom: 50px;
+        margin-top: 30px;  
+    }
+
+    #header{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        background: linear-gradient(to top right,#ffffff 49%, #222 49% 50%, #ED3237 50%);
+    }
+
+    #content_header{
+        position: relative;
+        text-transform: uppercase;
+        top: 6%;
+        width: 300px;
+        border-radius: 12px;
+        padding: 30px 0px;
+    }
+
+    #content_header h1{
+        color: #222;
+        font-size: 22px;
+    }
+
+    .ball {
+        width: 150px;
+    }
+
+     #all .container{
+        padding: 20px 50px;
+        width: 87%;
+        margin: auto;
+        border-radius: 32px;
+        position: absolute;
+        left: 7%;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.342);
+        animation: animate 10s linear infinite;
+        animation-delay: calc(-1s *var(--1));
+    }
+
+    .content_1{
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    
+    .content_1 h2{
+        text-align: center;
+        font-family: "DearSunshine";
+        font-size: 40px;
+    }
+    .content_1 p{
+        font-family: "AlmondNougat";
+        font-size: 13px;
+    }
+    
+    #content_2{
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    #content_2 h2{
+        text-align: center;
+        font-family: "DearSunshine";
+        font-size: 40px;
+    }
+    #content_2 p{
+        font-family: "AlmondNougat";
+        font-size: 13px;
+    }
+
+    #content_3{
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    #content_3 h2{
+        text-align: center;
+        font-family: "DearSunshine";
+        font-size: 40px;
+    }
+    #content_3 p{
+        font-family: "AlmondNougat";
+        font-size: 13px;
+    }
+    
+    #login .container{
+        margin: auto;
+        width: 90%;
+        border-radius: 32px;
+        position: absolute;
+        top: 0.7%;
+        left: 5%;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.342);
+        animation: animate 10s linear infinite;
+        animation-delay: calc(-1s *var(--1));
+    }
+
+    #buba{
+        width: 300px;
+        position: relative;
+        left: 15%;
+        top: -40px; 
+    }
+    .title_log img{
+        width:70px;
+        position: absolute;
+        top: 15px;
+        right: 5px;
+    }
+    #form_log{
+        position: relative;
+        left: 2%;
+        top: 10%;
+        width: 400px;
+        height: 240px;
+    }
+    .form{ 
+        width: 80%;
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px 0px 10px 30px;
+    }
+    .btn{
+        border: 2px solid #719B39;
+        background: none;
+        padding: 7px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .btn2{
+        border: 2px solid #30A0F9;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .btnb{
+        border: 2px solid #3E3E3E;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnr{
+        border: 2px solid #746EAF;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnm{
+        border: 2px solid #F37F56;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    
+
+    #cadastro{
+        height: 165vh;
+    }
+
+    #cadastro .container{
+        margin: auto;
+        width: 90%;
+        height: 145%;
+        border-radius: 32px;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.342);
+        animation: animate 10s linear infinite;
+        animation-delay: calc(-1s *var(--1));
+    }
+
+    .form2{
+        width: 80%;
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px 10px 10px 30px ;
+    }
+
+    .form2 input{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        color: #595f6e;
+        padding-top: 5px;
+        border: none;
+        outline: none;
+    }
+    
+    .title_log2{
+        left: -1%;
+    }
+
+    #cadastro img2{
+        display: none;
+    }
 
     
 }
@@ -830,7 +1094,7 @@ i{
 
     #content_header h1{
         color: #222;
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .ball {
@@ -855,7 +1119,7 @@ i{
     }
 
     .content_1{
-        height: 100vh;
+        height: 110vh;
         display: flex;
         justify-content: center;
         align-items: center; 
@@ -871,6 +1135,12 @@ i{
         font-size: 13px;
     }
     
+    #content_2{
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
     #content_2 h2{
         text-align: center;
         font-family: "DearSunshine";
@@ -879,6 +1149,13 @@ i{
     #content_2 p{
         font-family: "AlmondNougat";
         font-size: 13px;
+    }
+
+    #content_3{
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
     }
 
     #content_3 h2{
@@ -890,13 +1167,13 @@ i{
         font-family: "AlmondNougat";
         font-size: 13px;
     }
-
+    
     #login .container{
         margin: auto;
         width: 90%;
         border-radius: 32px;
         position: absolute;
-        top: 2%;
+        top: 0.7%;
         left: 5%;
         backdrop-filter: blur(30px);
         box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
@@ -1087,6 +1364,7 @@ i{
 
     #content_header h1{
         color: #222;
+        font-size: 28px;
     }
 
     .ball {
