@@ -1,7 +1,7 @@
-/*Criar uma fonte, usar o keyframe (animação), deixar responsivo*/
 /*cores: azul #30A0F9; verde #719B39; roxo #746EAF; vermelho #ED3237; preto #3E3E3E*/
 
 /*Declaração das fontes*/
+
 @font-face { 
     font-family: "AlmondNougat";
     src: url(../font/AlmondNougat.woff);
@@ -29,9 +29,9 @@
 
 .social_media{
     margin-top: 1rem;
-    display: flex;
-    
+    display: flex;  
 }
+
 .social_media a {
     text-decoration: none;
     color: #1e1e2a;
@@ -43,15 +43,17 @@
     justify-content: center;
     transition: .5s ease-in-out;
 }
+
 .social_media a:hover{
     background-color: #ffffff;
 }
+
 .checkbox_container{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .checkbox{
     height: 100px;
     width: 100px;
@@ -64,6 +66,7 @@
     z-index: 999;
     transition: 400ms ease-in-out 0s;
 }
+
 .checkbox .trace{
     width: 50px;
     height: 2px;
@@ -72,21 +75,26 @@
     border-radius: 4px;
     transition: .5s ease-in-out;
 }
+
 .checkbox .trace:nth-child(1){
     top: 26px;
     transform: rotate(0);
 }
+
 .checkbox .trace:nth-child(2){
     top: 46px;
     transform: rotate(0);
 }
+
 .checkbox .trace:nth-child(3){
     top: 66px;
     transform: rotate(0);
 }
+
 #toggle{
     display: none;
 }
+
 .menu{
     position: absolute;
     top: 28px;
@@ -99,6 +107,7 @@
     z-index: -1;
     transition: 700ms ease-in-out 0s;
 }
+
 .menu_itens{
     position: fixed;
     top: 0;
@@ -113,9 +122,11 @@
     visibility: hidden;
     transition: 400ms ease-in-out 0s;
 }
+
 .menu_itens ul{
     list-style-type: none;
 }
+
 .menu_itens ul li a{
     text-decoration: none;
     margin: 10px 0;
@@ -126,40 +137,49 @@
     font-size: 40px;
     transition: 0.6s;
 }
+
 .menu_itens ul li a:hover{
     color: #595f6e;
 }
+
 #toggle:checked + .checkbox .trace:nth-child(1){
     transform: rotate(45deg);
     top: 47px;
 }
+
 #toggle:checked + .checkbox .trace:nth-child(2){
     transform:  translate(-100px);
     width: 30px;
     visibility: hidden;
     opacity: 0;
 }
+
 #toggle:checked + .checkbox .trace:nth-child(3){
     transform: rotate(-45deg);
     top: 48px;
 }
+
 #toggle:checked{
     background-color: #ffffff;
 }
+
 #toggle:checked ~ .menu{
     box-shadow: 0px 0px 0px 100vmax #ffffff;
     z-index: 1;
 }
+
 #toggle:checked ~ .menu_itens{
     visibility: visible;
     opacity: 1;
 }
 
-/*----------Conteudos Repetidos------------*/
+/* ----------All------------*/
+
 #all img:not(.ball){
     width: 500px;
     margin-bottom: 50px;
 }
+
 #all .container{
     margin: auto;
     border-radius: 32px;
@@ -174,30 +194,13 @@
     animation: animate 10s linear infinite;
     animation-delay: calc(-1s *var(--1));
 }
-#cadastro button{
-    margin-top: 40px;
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    border: 2px solid #222;
-    background-color: transparent;
-}
 
-#cadastro .img2{
-    position: absolute;
-    left: -20px;
-    width:550px;
-}
-#cadastro .img1{
-    position: absolute;
-    top: -80px;
-    left: 180px;
-}
-.center{
+ .center{
     text-align: center;
 }
 
 /*----------Inicio Header-------*/
+
 #header{
     width: 100%;
     height: 100vh;
@@ -208,15 +211,18 @@
     letter-spacing: 0.1rem;
     background: linear-gradient(to top right,#ffffff 49%, #222 49% 50%, #ED3237 50%);
 }
+
 #content_header{
     text-transform: uppercase;
     width: 300px;
     border-radius: 12px;
     padding: 30px 0px;
 }
+
 #content_header h1{
     color: #222;
 }
+
 .ball {
     width: 200px;
 }
@@ -239,21 +245,47 @@
     font-size: 20px;
 }
 
-.content_1 button{
-    background-color: transparent;
-    border: 2px solid #222;
-    border-radius: 8px;
-    width: 150px;
-    height: 50px;
+.btnm{
+    border: 2px solid #F37F56;
+    border-radius: 4px;
+    background: none;
+    padding: 10px 20px;
     font-size: 18px;
-    transition: .6s;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
 }
 
-.content_1 button:hover{
-    cursor: pointer;
-    background-color: #ED3237;
-    color: #ffffff;
-    border: none;
+.btn3{
+    color: #F37F56;
+}
+
+.btn3:hover{
+color: #fff;
+}
+
+.btnm::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #F37F56;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn3::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn3:hover::before{
+    height: 180%;
 }
 
 /*---------------Inicio content-2----------------------*/
@@ -264,29 +296,60 @@
     justify-content: center;
     align-items: center; 
 }
+
 #content_2 h2{
     text-align: center;
     font-family: "DearSunshine";
     font-size: 64px;
 }
+
 #content_2 p{
     font-family: "AlmondNougat";
     font-size: 20px;
 }
-#content_2 button{
-    background-color: transparent;
-    border: 2px solid #222;
-    border-radius: 8px;
-    width: 150px;
-    height: 50px;
+
+.btnr{
+    border: 2px solid #746EAF;
+    border-radius: 4px;
+    background: none;
+    padding: 10px 20px;
     font-size: 18px;
-    transition: .6s;
-}
-#content_2 button:hover{
     cursor: pointer;
-    background-color: #ED3237;
-    color: #ffffff;
-    border: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+.btn4{
+    color: #746EAF;
+}
+
+.btn4:hover{
+color: #fff;
+}
+
+.btnr::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #746EAF;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn4::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn4:hover::before{
+    height: 180%;
 }
 
 /*---------------------Inicio Content-3------------------------------*/
@@ -296,30 +359,62 @@
     justify-content: center;
     align-items: center; 
 }
+
 #content_3 h2{
     text-align: center;
     font-family: "DearSunshine";
     font-size: 64px;
 }
+
 #content_3 p{
     font-family: "AlmondNougat";
     font-size: 20px;
 }
-#content_3 button{
-    background-color: transparent;
-    border: 2px solid #222;
-    border-radius: 8px;
-    width: 150px;
-    height: 50px;
+
+.btnb{
+    border: 2px solid #3E3E3E;
+    border-radius: 4px;
+    background: none;
+    padding: 10px 20px;
     font-size: 18px;
-    transition: .6s;
-}
-#content_3 button:hover{
     cursor: pointer;
-    background-color: #ED3237;
-    color: #ffffff;
-    border: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
 }
+
+
+.btn5{
+    color: #3E3E3E;
+}
+
+.btn5:hover{
+color: #fff;
+}
+
+.btnb::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #3E3E3E;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn5::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn5:hover::before{
+    height: 180%;
+}
+
 
 
 /*---------------inicio cadastro--------------------*/
@@ -332,6 +427,7 @@
     background-size: cover;
     height: 100vh;
 }
+
 #cadastro .container{
     margin: auto;
     border-radius: 32px;
@@ -346,9 +442,72 @@
     animation: animate 10s linear infinite;
     animation-delay: calc(-1s *var(--1));
 }
+
 #cadastro .container{
     margin-top: 20px;
     padding: 75px 40px 40px 40px;
+}
+
+
+#cadastro .img2{
+    position: absolute;
+    left: -20px;
+    width:550px;
+}
+
+#cadastro .img1{
+    position: absolute;
+    top: -80px;
+    left: 180px;
+}
+
+.title_log2{
+    text-transform: uppercase;
+    position: absolute;
+    display: inline-block;   
+}
+
+.btn2{
+    border: 2px solid #30A0F9;
+    border-radius: 4px;
+    background: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btn_cad{
+    color: #125891;
+}
+
+.btn_cad:hover{
+color: #fff;
+}
+
+.btn2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #30A0F9;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn_cad::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn_cad:hover::before{
+    height: 180%;
 }
 
 /*--------------------Inicio login--------------------------*/
@@ -376,9 +535,14 @@
     animation: animate 10s linear infinite;
     animation-delay: calc(-1s *var(--1));
 }
+
 #login .container{
     margin-top: 80px;
     padding: 50px;
+}
+
+.title_log img{
+    width:100px;
 }
 
 .title_log{
@@ -390,16 +554,14 @@
     justify-content: center;
     align-items: center;
 }
+
 #buba{
     width: 500px;
 }
 
-.title_log img{
-    width:100px;
-}
-
 .btn{
     border: 2px solid #719B39;
+    border-radius: 4px;
     background: none;
     padding: 10px 20px;
     font-size: 18px;
@@ -440,52 +602,45 @@ color: #fff;
     height: 180%;
 }
 
+/*-----------Parallax-------------*/
 
-form h2{
-    font-family: "DearSunshine";
-    font-size: 40px;
-    margin-left: 25px;
-    
-}
-
-.title_log2{
-    text-transform: uppercase;
-    position: absolute;
-    display: inline-block;   
-}
-
-/*------------Inicio ginasio----------------*/
-#ginasio{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-   /* background-image: url(../img/nascer.jpg);*/
-    height: 100vh;
-}
 .caixa1{
     background-image: url(../img/bg_pokepurple.PNG);  
 }
+.caixa1 h1{
+    font-size: 64px;
+}
+
 .caixa2{
     background-image: url(../img/bg_pokeblue.PNG);
 }
+
 .caixa3{
     background-image: url(../img/bg_pokeverde.PNG);
 }
+
 .caixa4{
     background-image: url(../img/bg_pokedark.PNG);
 }
+
 .caixa1, .caixa2, .caixa3,.caixa4{
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-top: 20%;
     position: relative;
-    height: 5vh;
+    height: 30vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+
+/*------------Forms----------------*/
+form h2{
+    font-family: "DearSunshine";
+    font-size: 40px;
+    margin-left: 25px; 
 }
 
 form{
@@ -494,11 +649,15 @@ form{
     padding: 30px;
     border-radius: 20px;
 }
+
+/*------------Form cadastro-------------------*/
+
 #form_log{
     position: relative;
     top: 20%;
     width: 505px;
 }
+
 .form2{
     width: 80%;
     position: relative;
@@ -506,6 +665,7 @@ form{
     overflow: hidden;
     margin: 20px 0px;
 }
+
 .form2 input{
     background-color: transparent;
     width: 100%;
@@ -552,6 +712,8 @@ form{
 .form2 input:focus + .label-name2::after, .form2 input:valid + .label-name2::after{
     transform: translateY(0%);
 }
+
+/*------------Forms login-------------------*/
 
 .form{ 
     width: 80%;
@@ -606,32 +768,36 @@ color: #719B39;
 transform: translateY(0%);
 }
 
+/*------------------Footer--------------------------*/
+
 footer{
-    height: 50px;
+    padding-top: 17px;
+    height: 60px;
     color: #fff;
     background: #222;
     text-align: center;
 }
 
 .social_media{
+   font-size: 25px;
     float: right;
+    position: relative;
+    right: 7%;
+    bottom: 15px;
+}
+i{
+   cursor: pointer;
+    margin-left: 20px;
 }
 
 
-/* * Responsividade */
+/*-------- Responsividade ----------------*/
 
 @media (max-width: 575.98px){
 
-    #content_header h1{
-        display: none;
-    }
-    .redirect{
-        display: flex;
-        flex-direction: column;
-    }
     
 }
-/* small*/
+/*------------- small---------------*/
 @media (min-width: 576px) and (max-width: 767.98px){
 
     #all img:not(.ball){
@@ -705,23 +871,6 @@ footer{
         font-size: 13px;
     }
     
-    .content_1 button{
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 12px;
-        width: 80px;
-        height: 30px;
-        transition: .6s;
-    }
-    
-    .content_1 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
-    }
-
     #content_2 h2{
         text-align: center;
         font-family: "DearSunshine";
@@ -730,21 +879,6 @@ footer{
     #content_2 p{
         font-family: "AlmondNougat";
         font-size: 13px;
-    }
-    #content_2 button{
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 12px;
-        width: 80px;
-        height: 30px;
-        transition: .6s;
-    }
-    #content_2 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
     }
 
     #content_3 h2{
@@ -757,22 +891,6 @@ footer{
         font-size: 13px;
     }
 
-    #content_3 button{
-
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 12px;
-        width: 80px;
-        height: 30px;
-        transition: .6s;
-    }
-    #content_3 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
-    }
     #login .container{
         margin: auto;
         width: 90%;
@@ -829,13 +947,74 @@ footer{
         overflow: hidden;
         z-index: 2;
     }
+
+    .btn2{
+        border: 2px solid #30A0F9;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .btnb{
+        border: 2px solid #3E3E3E;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnr{
+        border: 2px solid #746EAF;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnm{
+        border: 2px solid #F37F56;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
     
 
+    #cadastro{
+        height: 165vh;
+    }
 
     #cadastro .container{
         margin: auto;
         width: 90%;
-        height: 80%;
+        height: 145%;
         border-radius: 32px;
         position: absolute;
         top: 10%;
@@ -849,16 +1028,41 @@ footer{
         animation: animate 10s linear infinite;
         animation-delay: calc(-1s *var(--1));
     }
+
+    .form2{
+        width: 80%;
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px 10px 10px 30px ;
+    }
+
+    .form2 input{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        color: #595f6e;
+        padding-top: 5px;
+        border: none;
+        outline: none;
+    }
+    
+    .title_log2{
+        left: -1%;
+    }
+
+    #cadastro img2{
+        display: none;
+    }
      
    
 }
-/*Medium*/
+/*--------------------------Medium-------------*/
 @media (min-width: 768px) and (max-width: 991.98px){
 
     #all img:not(.ball){
         width: 290px;
-        margin-bottom: 50px;
-        
+        margin-bottom: 50px; 
     }
 
     #header{
@@ -871,6 +1075,7 @@ footer{
         letter-spacing: 0.1rem;
         background: linear-gradient(to top right,#ffffff 49%, #222 49% 50%, #ED3237 50%);
     }
+
     #content_header{
         position: relative;
         text-transform: uppercase;
@@ -879,9 +1084,11 @@ footer{
         border-radius: 12px;
         padding: 30px 0px;
     }
+
     #content_header h1{
         color: #222;
     }
+
     .ball {
         width: 200px;
     }
@@ -902,63 +1109,78 @@ footer{
         animation: animate 10s linear infinite;
         animation-delay: calc(-1s *var(--1));
     }
+
+    .btnb{
+        border: 2px solid #3E3E3E;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnr{
+        border: 2px solid #746EAF;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnm{
+        border: 2px solid #F37F56;
+        border-radius: 4px;
+        background: none;
+        padding: 8px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+
     .content_1{
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center; 
     }
-    
+
     .content_1 h2{
         text-align: center;
         font-family: "DearSunshine";
         font-size: 40px;
     }
+
     .content_1 p{
         font-family: "AlmondNougat";
         font-size: 13px;
     }
-    
-    .content_1 button{
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 12px;
-        width: 80px;
-        height: 30px;
-        transition: .6s;
-    }
-    
-    .content_1 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
-    }
+
 
     #content_2 h2{
         text-align: center;
         font-family: "DearSunshine";
         font-size: 40px;
     }
+
     #content_2 p{
         font-family: "AlmondNougat";
         font-size: 13px;
-    }
-    #content_2 button{
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 12px;
-        width: 80px;
-        height: 30px;
-        transition: .6s;
-    }
-    #content_2 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
     }
 
     #content_3 h2{
@@ -966,26 +1188,10 @@ footer{
         font-family: "DearSunshine";
         font-size: 40px;
     }
+
     #content_3 p{
         font-family: "AlmondNougat";
         font-size: 13px;
-    }
-
-    #content_3 button{
-
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 12px;
-        width: 80px;
-        height: 30px;
-        transition: .6s;
-    }
-    #content_3 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
     }
 
     form{
@@ -1036,18 +1242,12 @@ footer{
         animation-delay: calc(-1s *var(--1));
     }
     #buba {
-        display: none;
-        /* width: 300px;
-        margin-bottom: 200px;
-        position: relative;
-        left: 50%;
-        top: -50px; */
+        display: none;     
     }
     .form input{
         padding-top: 0px;
     }
    
-     
 }
 /*Large*/
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -1067,6 +1267,7 @@ footer{
         letter-spacing: 0.1rem;
         background: linear-gradient(to top right,#ffffff 49%, #222 49% 50%, #ED3237 50%);
     }
+
     #content_header{
         position: relative;
         text-transform: uppercase;
@@ -1075,14 +1276,16 @@ footer{
         border-radius: 12px;
         padding: 30px 0px;
     }
+
     #content_header h1{
         color: #222;
     }
+
     .ball {
         width: 200px;
     }
 
-     #all .container{
+    #all .container{
         padding: 20px 50px;
         width: 87%;
         margin: auto;
@@ -1114,23 +1317,6 @@ footer{
         font-family: "AlmondNougat";
         font-size: 16px;
     }
-    
-    .content_1 button{
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 14px;
-        width: 80px;
-        height: 40px;
-        transition: .6s;
-    }
-    
-    .content_1 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
-    }
 
     #content_2 h2{
         text-align: center;
@@ -1141,21 +1327,6 @@ footer{
         font-family: "AlmondNougat";
         font-size: 16px;
     }
-    #content_2 button{
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 14px;
-        width: 80px;
-        height: 40px;
-        transition: .6s;
-    }
-    #content_2 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
-    }
 
     #content_3 h2{
         text-align: center;
@@ -1165,23 +1336,6 @@ footer{
     #content_3 p{
         font-family: "AlmondNougat";
         font-size: 16px;
-    }
-
-    #content_3 button{
-
-        background-color: transparent;
-        border: 2px solid #222;
-        border-radius: 8px;
-        font-size: 14px;
-        width: 80px;
-        height: 40px;
-        transition: .6s;
-    }
-    #content_3 button:hover{
-        cursor: pointer;
-        background-color: #ED3237;
-        color: #ffffff;
-        border: none;
     }
 
     #login .container{
@@ -1199,6 +1353,13 @@ footer{
         background: rgba(255, 255, 255, 0.342);
         animation: animate 10s linear infinite;
         animation-delay: calc(-1s *var(--1));
+    }
+
+    #form_log{
+        position: relative;
+        top: 20%;
+        width: 400px;
+        height: 320px;
     }
 
     #buba {
@@ -1226,6 +1387,64 @@ footer{
         overflow: hidden;
         z-index: 2;
     }
+
+    .btn2{
+        border: 2px solid #30A0F9;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnb{
+        border: 2px solid #3E3E3E;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnr{
+        border: 2px solid #746EAF;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnm{
+        border: 2px solid #F37F56;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    
 
     #cadastro .container{
         margin: auto;
@@ -1316,10 +1535,69 @@ footer{
         animation: animate 10s linear infinite;
     }
 
+    .btn2{
+        border: 2px solid #30A0F9;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    
+
     .title_log2{
         position: absolute;
         left: 20px;
           
+    }
+
+    .btnb{
+        border: 2px solid #3E3E3E;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnr{
+        border: 2px solid #746EAF;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .btnm{
+        border: 2px solid #F37F56;
+        border-radius: 4px;
+        background: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
     }
 }
 
@@ -1329,8 +1607,8 @@ footer{
     width: 70px;
     border-radius: 50%;
     position: fixed;
-    bottom: 60px;
-    right: 30px;
+    bottom: 70px;
+    right: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: grid;
     place-items: center;

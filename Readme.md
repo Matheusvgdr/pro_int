@@ -22,3 +22,4 @@ senha varchar(255)
  
 select * from tb_cadastro;
 select * from tb_usuarios;
+
