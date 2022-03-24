@@ -1052,10 +1052,10 @@ i{
     }
     
     .title_log2{
-        left: -1%;
+        left: -5%;
     }
 
-    #cadastro img2{
+    #cadastro .img2{
         display: none;
     }
 
